@@ -150,20 +150,10 @@ on property:sys.boot_completed=1
    write /sys/kernel/sound_control/mic_gain 10
    write /sys/kernel/sound_control/headphone_gain "8 8"
 
-   # zswap
-   write /sys/module/zswap/parameters/enabled Y
-
-   # UKSM config
    write /sys/kernel/mm/uksm/run 1
-
-   # Adaptive LMK
-   write /sys/module/lowmemorykiller/parameters/enable_adaptive_lmk 1
 
    # Very light LMK profile
    write /sys/module/lowmemorykiller/parameters/minfree "7160,14320,21480,28640,35800,42960"
-
-   # Disable fsync
-   write /sys/module/sync/parameters/fsync_enabled 0
 
    # Vibration strength
    write /sys/class/timed_output/vibrator/vmax_mv_strong 2000
