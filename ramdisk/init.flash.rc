@@ -145,11 +145,12 @@ on property:sys.boot_completed=1
    write /sys/devices/soc.0/fdb00000.qcom,kgsl-3d0/devfreq/fdb00000.qcom,kgsl-3d0/adrenoboost 1
 
    # Sound settings
-   write /sys/kernel/sound_control/speaker_gain "30 30"
+   write /sys/kernel/sound_control/speaker_gain "25 25"
    write /sys/kernel/sound_control/headphone_pa_gain "1 1"
    write /sys/kernel/sound_control/mic_gain 10
-   write /sys/kernel/sound_control/headphone_gain "8 8"
+   write /sys/kernel/sound_control/headphone_gain "6 6"
 
+   # UKSM
    write /sys/kernel/mm/uksm/run 1
 
    # Very light LMK profile
