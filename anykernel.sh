@@ -44,9 +44,6 @@ dump_boot;
 # init.flash.rc
 insert_line init.angler.rc "init.flash.rc" after "import init.angler.sensorhub.rc" "import init.flash.rc";
 
-# init.performance_profiles.rc
-# insert_line init.angler.rc "performance_profiles" after "import init.angler.sensorhub.rc" "import init.performance_profiles.rc";
-
 # Add frandom compatibility
 backup_file ueventd.angler.rc;
 insert_line ueventd.angler.rc "erandom" before "/dev/genlock" "/dev/erandom              0666   root       root\n";
