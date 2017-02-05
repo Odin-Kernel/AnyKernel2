@@ -3,7 +3,7 @@
 
 ## AnyKernel setup
 # EDIFY properties
-kernel.string=Flash Kernel by @nathanchance
+kernel.string=Odin Kernel by @eruvatar and @nathanchance
 do.devicecheck=1
 do.initd=0
 do.modules=0
@@ -41,8 +41,8 @@ dump_boot;
 
 # begin ramdisk changes
 
-# init.flash.rc
-insert_line init.angler.rc "init.flash.rc" after "import init.angler.sensorhub.rc" "import init.flash.rc";
+# init.odin.rc
+insert_line init.angler.rc "init.odin.rc" after "import init.angler.sensorhub.rc" "import init.odin.rc";
 
 # Add frandom compatibility
 backup_file ueventd.angler.rc;
